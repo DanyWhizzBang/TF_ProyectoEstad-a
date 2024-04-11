@@ -1,15 +1,155 @@
-<div>
-    <h1>Login</h1>
-      <form action="/auth" method="post">
-          <label for="email">
-              <!-- font awesome icon -->
-              <i class="fas fa-user"></i>
-          </label>
-          <input type="email" name="email" placeholder="email" id="email" required>
-          <label for="password">
-              <i class="fas fa-lock"></i>
-          </label>
-          <input type="password" name="password" placeholder="Password" id="password" required>
-          <input type="submit" value="Login">
-      </form>
+
+
+<div class="bodyIndex" >
+  <center><img src="https://github.com/DanyWhizzBang/Utileria_TFPrjct/blob/main/logo.png?raw=true" alt="Logo xcaret" class="centered-image" width="400" height="200"></center>
+    <div class="grad"></div>
+    <div class="header">
+        <div>Todo<span>Fluye</span></div>
+    </div>
+    <br>
+    <div class="login">
+            <input id="name" type="text" placeholder="Usuario" name="user"><br>
+            <input id="password" type="password" placeholder="Contraseña" name="password"><br>
+            <input id="btnLogin" type="button" value="Ingresar">
+    </div>
   </div>
+
+  <style>
+
+    bodyIndex{
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    
+      color: #fff;
+      font-family: Arial;
+      font-size: 12px;
+    }
+    
+    .bodyIndex{
+      margin-top: 5%;
+      position: relative;
+      top: -20px;
+      bottom: -40px;
+      width:auto;
+      height:max-content;
+      background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
+      background-size: cover;
+      z-index: 0;
+    }
+    
+    .grad{
+      position: absolute;
+      top: -20px;
+      left: -30%;
+      right: 0%;
+      bottom: -35%;
+      width: auto;
+      height: auto;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+      z-index: 1;
+      opacity: 0.7;
+    }
+    
+    .header{
+      position: relative;
+      top: calc(50% - 35px);
+      left: calc(50% - 255px);
+      z-index: 2;
+    }
+    
+    .header div{
+      float: left;
+      color: #fff;
+      font-family: 'Exo', sans-serif;
+      font-size: 35px;
+      font-weight: 200;
+    }
+    
+    .header div span{
+      color: #0d44f8 !important;
+    }
+    
+    .login{
+      position: relative;
+      top: calc(50% - 75px);
+      left: calc(50% - 50px);
+      height: 150px;
+      width: 350px;
+      padding: 10px;
+      z-index: 2;
+    }
+    
+    .login input[type=text]{
+      width: 250px;
+      height: 30px;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.6);
+      border-radius: 2px;
+      color: #fff;
+      font-family: 'Exo', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 4px;
+    }
+    
+    .login input[type=password]{
+      width: 250px;
+      height: 30px;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.6);
+      border-radius: 2px;
+      color: #fff;
+      font-family: 'Exo', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 4px;
+      margin-top: 10px;
+    }
+    
+    .login input[type=button]{
+      width: 260px;
+      height: 35px;
+      background: #fff;
+      border: 1px solid #fff;
+      cursor: pointer;
+      border-radius: 2px;
+      color: #a18d6c;
+      font-family: 'Exo', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 6px;
+      margin-top: 10px;
+    }
+    
+    .login input[type=button]:hover{
+      opacity: 0.8;
+    }
+    
+    .login input[type=button]:active{
+      opacity: 0.6;
+    }
+    
+    .login input[type=text]:focus{
+      outline: none;
+      border: 1px solid rgba(255,255,255,0.9);
+    }
+    
+    .login input[type=password]:focus{
+      outline: none;
+      border: 1px solid rgba(255,255,255,0.9);
+    }
+    
+    .login input[type=button]:focus{
+      outline: none;
+    }
+    
+    ::-webkit-input-placeholder{
+       color: rgb(255, 255, 255);
+    }
+    
+    ::-moz-input-placeholder{
+       color: rgb(255, 255, 255);
+    }
+      </style>
+  

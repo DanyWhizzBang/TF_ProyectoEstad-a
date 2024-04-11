@@ -1,4 +1,4 @@
-function index(req, res) {
+function login(req, res) {
     if (req.session.loggedin) {
           // Output username
       res.redirect('/');
@@ -13,11 +13,11 @@ function index(req, res) {
   }
   
   function auth(req, res) {
-      let email = req.body.email;
+      let name = req.body.name;
       let password = req.body.password;
   
     req.getConnection((err, conn) => {
-      conn.query('SELECT * FROM users WHERE email = ?', [email], (err, rows) => {
+      conn.query('SELECT * FROM usuarios WHERE name = ?', [name], (err, rows) => {
         if(rows.length > 0) {
           console.log(rows);
         } else {
@@ -42,7 +42,7 @@ function index(req, res) {
   
   
   module.exports = {
-    index: index,
+    login: login,
     register: register,
     auth: auth,
     logout: logout,
